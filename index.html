@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Bookmarker</title>
+</head>
+
+<body style="background-color: #f7ecde;">
+  <div class="container py-3 my-4">
+    <h1 class="fa-bold text-center" style="color: #352e28;">Bookmarker</h1>
+    <h2 class="text-center text-success mb-5">Bookmark your favorite sites ⭐</h2>
+  </div>
+
+  <div class="container py-4 my-4 bg-white shadow rounded">
+    <label for="name" class="form-label fw-bold">Site Name:</label>
+    <h2 class="mb-4"> Site Name</h2>
+    <input type="text" id="name" class="form-control red-outline my-3" placeholder="Bookmark Name" />
+
+    <h2 class="mb-4"> Site URL</h2>
+    <label for="website" class="form-label fw-bold">Website URL:</label>
+    <input id="website"  type="text"  class="form-control red-outline my-3 " placeholder="Website URL" />
+
+    <div class="text-center">
+      <button id="site-btn" class="btn btn-danger w-25" onclick="addData();">Submit</button>
+    </div>
+  </div>
+
+  <input type="search" id="site-search" class="form-control mb-5 m-auto w-50" placeholder="Search By Site Name"
+    oninput="searchItems();" />
+
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="display-data">
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
